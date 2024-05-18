@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--On Boarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="OnBoardingViewController" customModule="Let_s_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Light Blue Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-JI-g4u">
+                                <rect key="frame" x="30" y="0.0" width="363" height="568"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Girl Model M1" translatesAutoresizingMaskIntoConstraints="NO" id="hT4-BE-QHW">
+                                <rect key="frame" x="219" y="137" width="111" height="111"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Girl Model M2" translatesAutoresizingMaskIntoConstraints="NO" id="GZT-nM-wl8">
+                                <rect key="frame" x="135" y="258" width="173" height="173"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Get Started" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu5-vv-WVj">
+                                <rect key="frame" x="30" y="524" width="333" height="174"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="80"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your feelings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-L8-XER">
+                                <rect key="frame" x="30" y="708" width="159" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZe-ju-wpN">
+                                <rect key="frame" x="96.666666666666686" y="761" width="200" height="42"/>
+                                <color key="backgroundColor" name="BrandBlackBrown"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0CT-7U-cse"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Join Now"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nu5-vv-WVj" secondAttribute="bottom" constant="120" id="0J4-Bk-w8D"/>
+                            <constraint firstItem="0Su-L8-XER" firstAttribute="top" secondItem="nu5-vv-WVj" secondAttribute="bottom" constant="10" id="3H5-FW-Xzw"/>
+                            <constraint firstItem="GZT-nM-wl8" firstAttribute="top" secondItem="hT4-BE-QHW" secondAttribute="bottom" constant="10" id="3c4-VX-VDP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hT4-BE-QHW" secondAttribute="trailing" constant="63" id="3ur-cI-80f"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GZT-nM-wl8" secondAttribute="trailing" constant="85" id="6Bi-kF-VS4"/>
+                            <constraint firstItem="mZe-ju-wpN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6ob-sV-l1K"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ufM-JI-g4u" secondAttribute="bottom" constant="250" id="7kv-c9-1Pf"/>
+                            <constraint firstItem="ufM-JI-g4u" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="OEG-jl-XcD"/>
+                            <constraint firstItem="hT4-BE-QHW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="PsH-nJ-9PT"/>
+                            <constraint firstItem="nu5-vv-WVj" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="30" id="T1a-h4-6Ot"/>
+                            <constraint firstItem="0Su-L8-XER" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="WpM-63-VEG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mZe-ju-wpN" secondAttribute="bottom" constant="15" id="Wpu-Aq-RTr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ufM-JI-g4u" secondAttribute="trailing" id="d52-VH-u1W"/>
+                            <constraint firstAttribute="trailing" secondItem="nu5-vv-WVj" secondAttribute="trailing" constant="30" id="hJc-cR-Z2W"/>
+                            <constraint firstItem="ufM-JI-g4u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="xXp-gR-WPX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="joinNowButton" destination="mZe-ju-wpN" id="bBf-Cz-hcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="K5f-bL-pPU">
+            <objects>
+                <viewController id="UUC-Cr-5ZM" customClass="LoginViewController" customModule="Let_s_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRI-mo-cdA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-tc-sbc">
+                                <rect key="frame" x="0.0" y="219" width="388" height="633"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oc-fc-MNq">
+                                <rect key="frame" x="30" y="99" width="262" height="35"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="35"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Username &amp; Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qh-Ot-t6X">
+                                <rect key="frame" x="30" y="144" width="258.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="18"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuX-CJ-C38">
+                                <rect key="frame" x="25" y="262" width="85" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jub-PE-iWk">
+                                <rect key="frame" x="20" y="292" width="353" height="21.333333333333314"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biq-IX-2aW">
+                                <rect key="frame" x="20" y="373.33333333333331" width="353" height="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De4-8N-ALn">
+                                <rect key="frame" x="121.66666666666669" y="650" width="150" height="38"/>
+                                <color key="backgroundColor" name="BrandBlackBrown"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="rkj-th-PYZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="LOGIN"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Si-Bu-e0e">
+                                <rect key="frame" x="79.666666666666686" y="718" width="234" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="MQA-Pq-Jdj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Forgotten Password?">
+                                    <color key="titleColor" name="BrandBlackBrown"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-pn-iLL">
+                                <rect key="frame" x="116" y="747" width="161" height="27"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="or Create a New Account">
+                                    <color key="titleColor" name="BrandBlackBrown"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-HP-bcj">
+                                <rect key="frame" x="24.999999999999993" y="343.33333333333331" width="79.333333333333314" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rbz-MB-Lem"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jub-PE-iWk" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="20" id="0k2-Ks-5hl"/>
+                            <constraint firstItem="Rbz-MB-Lem" firstAttribute="trailing" secondItem="jub-PE-iWk" secondAttribute="trailing" constant="20" id="17C-IM-5uv"/>
+                            <constraint firstItem="UhM-HP-bcj" firstAttribute="top" secondItem="jub-PE-iWk" secondAttribute="bottom" constant="30" id="1YB-mY-wju"/>
+                            <constraint firstItem="biq-IX-2aW" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="20" id="5Ma-hZ-b2l"/>
+                            <constraint firstItem="De4-8N-ALn" firstAttribute="centerX" secondItem="bRI-mo-cdA" secondAttribute="centerX" id="67z-Tr-4tK"/>
+                            <constraint firstItem="nuX-CJ-C38" firstAttribute="top" secondItem="6Qh-Ot-t6X" secondAttribute="bottom" constant="100" id="BF7-0A-nUd"/>
+                            <constraint firstItem="0Si-Bu-e0e" firstAttribute="top" secondItem="De4-8N-ALn" secondAttribute="bottom" constant="30" id="BVY-Lr-bJ0"/>
+                            <constraint firstItem="3oc-fc-MNq" firstAttribute="top" secondItem="Rbz-MB-Lem" secondAttribute="top" constant="40" id="CcB-74-uKk"/>
+                            <constraint firstItem="jub-PE-iWk" firstAttribute="top" secondItem="nuX-CJ-C38" secondAttribute="bottom" constant="10" id="EIO-Qk-ty2"/>
+                            <constraint firstItem="hb0-pn-iLL" firstAttribute="centerX" secondItem="bRI-mo-cdA" secondAttribute="centerX" id="Eti-Rp-UeS"/>
+                            <constraint firstItem="3oc-fc-MNq" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="30" id="J8g-9e-ftA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="De4-8N-ALn" secondAttribute="bottom" constant="130" id="UIa-jd-rPi"/>
+                            <constraint firstItem="6Qh-Ot-t6X" firstAttribute="top" secondItem="3oc-fc-MNq" secondAttribute="bottom" constant="10" id="Urc-b2-B7Z"/>
+                            <constraint firstItem="XyY-tc-sbc" firstAttribute="leading" secondItem="bRI-mo-cdA" secondAttribute="leading" id="fRk-sU-eUK"/>
+                            <constraint firstItem="6Qh-Ot-t6X" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="30" id="hEk-FV-025"/>
+                            <constraint firstAttribute="trailing" secondItem="XyY-tc-sbc" secondAttribute="trailing" constant="5" id="igv-wV-8XK"/>
+                            <constraint firstItem="Rbz-MB-Lem" firstAttribute="trailing" secondItem="biq-IX-2aW" secondAttribute="trailing" constant="20" id="kq5-gX-w4Y"/>
+                            <constraint firstItem="nuX-CJ-C38" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="25" id="l10-AI-oSl"/>
+                            <constraint firstItem="biq-IX-2aW" firstAttribute="top" secondItem="UhM-HP-bcj" secondAttribute="bottom" constant="10" id="pLR-Gr-kIA"/>
+                            <constraint firstItem="UhM-HP-bcj" firstAttribute="leading" secondItem="Rbz-MB-Lem" secondAttribute="leading" constant="25" id="pdN-2v-niy"/>
+                            <constraint firstAttribute="bottom" secondItem="XyY-tc-sbc" secondAttribute="bottom" id="utx-SI-meG"/>
+                            <constraint firstItem="hb0-pn-iLL" firstAttribute="top" secondItem="0Si-Bu-e0e" secondAttribute="bottom" constant="2" id="wqE-id-dVQ"/>
+                            <constraint firstItem="0Si-Bu-e0e" firstAttribute="centerX" secondItem="bRI-mo-cdA" secondAttribute="centerX" id="xM2-n0-S30"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tf8-Wi-Zk3"/>
+                    <connections>
+                        <outlet property="loginButton" destination="De4-8N-ALn" id="4Yy-Uo-jRo"/>
+                        <outlet property="passwordTextField" destination="biq-IX-2aW" id="itG-Hc-iMP"/>
+                        <outlet property="userNameTextField" destination="jub-PE-iWk" id="ziV-ta-Sih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUe-8U-qbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="4"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="0CH-1j-M6P">
+            <objects>
+                <viewController id="bSW-C4-smo" customClass="SignUpViewController" customModule="Let_s_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mv6-tj-cRV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pink Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-2l-khU">
+                                <rect key="frame" x="0.0" y="99" width="393" height="659"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-tk-BD2">
+                                <rect key="frame" x="20" y="129" width="250" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Exl-sm-Emp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="35"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyO-eM-aPJ">
+                                <rect key="frame" x="20" y="299" width="126" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXk-ib-GQT">
+                                <rect key="frame" x="20" y="380.66666666666669" width="353" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tE-Yj-acI">
+                                <rect key="frame" x="20" y="462.33333333333331" width="353" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYZ-3X-YnV">
+                                <rect key="frame" x="20" y="542.33333333333337" width="353" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-xr-bvz">
+                                <rect key="frame" x="20" y="329" width="353" height="21.666666666666686"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkl-ur-nZ8">
+                                <rect key="frame" x="20" y="410.66666666666669" width="353" height="21.666666666666686"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-pW-a0z">
+                                <rect key="frame" x="20" y="492.33333333333331" width="353" height="19.999999999999943"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUm-rd-xxU">
+                                <rect key="frame" x="20" y="572.33333333333337" width="353" height="20"/>
+                                <color key="textColor" name="BrandBlackBrown"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="new-password"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na7-YR-Nuy">
+                                <rect key="frame" x="121.66666666666669" y="695" width="150" height="38"/>
+                                <color key="backgroundColor" name="BrandBlackBrown"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="tNp-TQ-rjk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="znP-D6-d4d"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Feb-xr-bvz" firstAttribute="top" secondItem="ZyO-eM-aPJ" secondAttribute="bottom" constant="10" id="6RZ-N6-9Y0"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="IXk-ib-GQT" secondAttribute="trailing" constant="20" id="7vp-m6-Vxc"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="8tE-Yj-acI" secondAttribute="trailing" constant="20" id="8Ag-mT-1Ud"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="9wK-2l-khU" secondAttribute="trailing" id="8bA-jN-SZE"/>
+                            <constraint firstItem="IXk-ib-GQT" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="GnM-yr-Y3d"/>
+                            <constraint firstItem="ZyO-eM-aPJ" firstAttribute="top" secondItem="jrE-tk-BD2" secondAttribute="bottom" constant="100" id="I2F-QZ-zeH"/>
+                            <constraint firstItem="MUm-rd-xxU" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="Iaz-az-7Gd"/>
+                            <constraint firstItem="ITJ-pW-a0z" firstAttribute="top" secondItem="8tE-Yj-acI" secondAttribute="bottom" constant="10" id="KUY-7H-C8F"/>
+                            <constraint firstItem="xkl-ur-nZ8" firstAttribute="top" secondItem="IXk-ib-GQT" secondAttribute="bottom" constant="10" id="Kge-9e-bhJ"/>
+                            <constraint firstItem="9wK-2l-khU" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" id="MT2-yj-11C"/>
+                            <constraint firstItem="rYZ-3X-YnV" firstAttribute="top" secondItem="ITJ-pW-a0z" secondAttribute="bottom" constant="30" id="Nj1-Aw-xz6"/>
+                            <constraint firstItem="ZyO-eM-aPJ" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="OgD-Sa-agh"/>
+                            <constraint firstItem="IXk-ib-GQT" firstAttribute="top" secondItem="Feb-xr-bvz" secondAttribute="bottom" constant="30" id="Qp4-Ug-4D7"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="MUm-rd-xxU" secondAttribute="trailing" constant="20" id="Qyb-qT-pwA"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="xkl-ur-nZ8" secondAttribute="trailing" constant="20" id="SZo-vD-g4z"/>
+                            <constraint firstItem="8tE-Yj-acI" firstAttribute="top" secondItem="xkl-ur-nZ8" secondAttribute="bottom" constant="30" id="TKT-0c-zVK"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="Feb-xr-bvz" secondAttribute="trailing" constant="20" id="TsN-DK-38U"/>
+                            <constraint firstItem="xkl-ur-nZ8" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="d5d-EY-2O7"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="ITJ-pW-a0z" secondAttribute="trailing" constant="20" id="deu-HM-oez"/>
+                            <constraint firstItem="na7-YR-Nuy" firstAttribute="centerX" secondItem="mv6-tj-cRV" secondAttribute="centerX" id="eBq-Z3-LVI"/>
+                            <constraint firstItem="Feb-xr-bvz" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="jfT-8R-YUy"/>
+                            <constraint firstItem="rYZ-3X-YnV" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="qO1-XM-ZDj"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="bottom" secondItem="na7-YR-Nuy" secondAttribute="bottom" constant="85" id="rXz-Se-U9z"/>
+                            <constraint firstItem="9wK-2l-khU" firstAttribute="top" secondItem="znP-D6-d4d" secondAttribute="top" constant="40" id="t73-qY-hpq"/>
+                            <constraint firstItem="jrE-tk-BD2" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="tEi-1w-kzu"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="bottom" secondItem="9wK-2l-khU" secondAttribute="bottom" constant="60" id="tl0-5E-M7t"/>
+                            <constraint firstItem="8tE-Yj-acI" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="uAC-iN-XRQ"/>
+                            <constraint firstItem="jrE-tk-BD2" firstAttribute="top" secondItem="znP-D6-d4d" secondAttribute="top" constant="70" id="utf-se-3hc"/>
+                            <constraint firstItem="znP-D6-d4d" firstAttribute="trailing" secondItem="rYZ-3X-YnV" secondAttribute="trailing" constant="20" id="vrx-EG-sWb"/>
+                            <constraint firstItem="MUm-rd-xxU" firstAttribute="top" secondItem="rYZ-3X-YnV" secondAttribute="bottom" constant="10" id="xRL-e9-z5N"/>
+                            <constraint firstItem="ITJ-pW-a0z" firstAttribute="leading" secondItem="znP-D6-d4d" secondAttribute="leading" constant="20" id="y4e-R1-97Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="MUm-rd-xxU" id="Xz6-fF-uCc"/>
+                        <outlet property="emailTextField" destination="Feb-xr-bvz" id="514-LA-upo"/>
+                        <outlet property="passwordTextField" destination="ITJ-pW-a0z" id="rTz-SO-owH"/>
+                        <outlet property="signUpButton" destination="na7-YR-Nuy" id="dtZ-5b-XMA"/>
+                        <outlet property="usernameTextField" destination="xkl-ur-nZ8" id="bYB-DK-RDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WP5-bg-euG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710.6870229007634" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Girl Model M1" width="111" height="111"/>
+        <image name="Girl Model M2" width="173" height="173"/>
+        <image name="Green Clouds" width="428" height="633"/>
+        <image name="Light Blue Clouds" width="397" height="607"/>
+        <image name="Pink Clouds" width="428" height="713"/>
+        <namedColor name="BrandBlackBrown">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
