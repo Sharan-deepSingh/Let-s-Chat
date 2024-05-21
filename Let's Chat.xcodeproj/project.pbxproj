@@ -17,9 +17,10 @@
 		CE29A1712BE26A4700E34B2F /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29A1702BE26A4700E34B2F /* MessageBubble.swift */; };
 		CE5F43CB2BF0C11100165969 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5F43CA2BF0C11100165969 /* Onboarding.storyboard */; };
 		CE5F43CE2BF0CF1700165969 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F43CD2BF0CF1700165969 /* OnBoardingViewController.swift */; };
-		CEBD88872BF7366700445644 /* UIElementsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88862BF7366700445644 /* UIElementsExtensions.swift */; };
+		CEBD88872BF7366700445644 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88862BF7366700445644 /* UIKitExtensions.swift */; };
 		CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88882BF750AF00445644 /* LoginViewController.swift */; };
 		CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD888B2BF788BF00445644 /* SignUpViewController.swift */; };
+		CEC76A882BFC6DC70074FFD6 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */; };
 		CEE7D2E62BE7AC8800549090 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7D2E52BE7AC8800549090 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +36,10 @@
 		CE29A1702BE26A4700E34B2F /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		CE5F43CA2BF0C11100165969 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CE5F43CD2BF0CF1700165969 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		CEBD88862BF7366700445644 /* UIElementsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementsExtensions.swift; sourceTree = "<group>"; };
+		CEBD88862BF7366700445644 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		CEBD88882BF750AF00445644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEBD888B2BF788BF00445644 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		CEE7D2E52BE7AC8800549090 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				CE056DC12BC13A49003843AF /* SceneDelegate.swift */,
 				CE5F43C92BF0C0D200165969 /* OnBoardingScreen */,
 				CE5F43C52BF0B23400165969 /* ChatScreen */,
+				CEC76A862BFC6DA10074FFD6 /* Constants */,
 				CEBD888A2BF7882D00445644 /* Helper */,
 				CE056DC82BC13A4B003843AF /* Assets.xcassets */,
 				CE056DCA2BC13A4B003843AF /* LaunchScreen.storyboard */,
@@ -133,9 +136,17 @@
 		CEBD888A2BF7882D00445644 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				CEBD88862BF7366700445644 /* UIElementsExtensions.swift */,
+				CEBD88862BF7366700445644 /* UIKitExtensions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		CEC76A862BFC6DA10074FFD6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +229,9 @@
 			files = (
 				CE056DC02BC13A49003843AF /* AppDelegate.swift in Sources */,
 				CE056DD42BC14C74003843AF /* ChatViewController.swift in Sources */,
-				CEBD88872BF7366700445644 /* UIElementsExtensions.swift in Sources */,
+				CEBD88872BF7366700445644 /* UIKitExtensions.swift in Sources */,
 				CE29A1712BE26A4700E34B2F /* MessageBubble.swift in Sources */,
+				CEC76A882BFC6DC70074FFD6 /* AlertMessages.swift in Sources */,
 				CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */,
 				CE5F43CE2BF0CF1700165969 /* OnBoardingViewController.swift in Sources */,
 				CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */,
