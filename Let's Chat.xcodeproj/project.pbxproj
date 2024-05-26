@@ -17,6 +17,11 @@
 		CE29A1712BE26A4700E34B2F /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29A1702BE26A4700E34B2F /* MessageBubble.swift */; };
 		CE5F43CB2BF0C11100165969 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5F43CA2BF0C11100165969 /* Onboarding.storyboard */; };
 		CE5F43CE2BF0CF1700165969 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F43CD2BF0CF1700165969 /* OnBoardingViewController.swift */; };
+		CE851F1E2BFF12C40045368E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE851F1D2BFF12C40045368E /* GoogleService-Info.plist */; };
+		CE851F2D2BFF13490045368E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE851F2C2BFF13490045368E /* FirebaseAuth */; };
+		CE851F392BFF13490045368E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE851F382BFF13490045368E /* FirebaseFirestore */; };
+		CE851F5A2C00B50C0045368E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE851F592C00B50C0045368E /* SignUpViewModel.swift */; };
+		CE851F5C2C00BDE60045368E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE851F5B2C00BDE60045368E /* AppConstants.swift */; };
 		CEBD88872BF7366700445644 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88862BF7366700445644 /* UIKitExtensions.swift */; };
 		CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88882BF750AF00445644 /* LoginViewController.swift */; };
 		CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD888B2BF788BF00445644 /* SignUpViewController.swift */; };
@@ -36,6 +41,9 @@
 		CE29A1702BE26A4700E34B2F /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		CE5F43CA2BF0C11100165969 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CE5F43CD2BF0CF1700165969 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		CE851F1D2BFF12C40045368E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE851F592C00B50C0045368E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		CE851F5B2C00BDE60045368E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		CEBD88862BF7366700445644 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		CEBD88882BF750AF00445644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEBD888B2BF788BF00445644 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE081CD42BE2352900274456 /* IQKeyboardManagerSwift in Frameworks */,
+				CE851F2D2BFF13490045368E /* FirebaseAuth in Frameworks */,
+				CE851F392BFF13490045368E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 				CE056DC82BC13A4B003843AF /* Assets.xcassets */,
 				CE056DCA2BC13A4B003843AF /* LaunchScreen.storyboard */,
 				CE056DCD2BC13A4B003843AF /* Info.plist */,
+				CE851F1D2BFF12C40045368E /* GoogleService-Info.plist */,
 			);
 			path = "Let's Chat";
 			sourceTree = "<group>";
@@ -126,11 +137,20 @@
 			isa = PBXGroup;
 			children = (
 				CE5F43CA2BF0C11100165969 /* Onboarding.storyboard */,
+				CE851F582C00B4DC0045368E /* SignUp */,
 				CE5F43CD2BF0CF1700165969 /* OnBoardingViewController.swift */,
 				CEBD88882BF750AF00445644 /* LoginViewController.swift */,
-				CEBD888B2BF788BF00445644 /* SignUpViewController.swift */,
 			);
 			path = OnBoardingScreen;
+			sourceTree = "<group>";
+		};
+		CE851F582C00B4DC0045368E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD888B2BF788BF00445644 /* SignUpViewController.swift */,
+				CE851F592C00B50C0045368E /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		CEBD888A2BF7882D00445644 /* Helper */ = {
@@ -145,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */,
+				CE851F5B2C00BDE60045368E /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -167,6 +188,8 @@
 			name = "Let's Chat";
 			packageProductDependencies = (
 				CE081CD32BE2352900274456 /* IQKeyboardManagerSwift */,
+				CE851F2C2BFF13490045368E /* FirebaseAuth */,
+				CE851F382BFF13490045368E /* FirebaseFirestore */,
 			);
 			productName = "Let's Chat";
 			productReference = CE056DBC2BC13A49003843AF /* Let's Chat.app */;
@@ -198,6 +221,7 @@
 			mainGroup = CE056DB32BC13A49003843AF;
 			packageReferences = (
 				CE081CD22BE2352900274456 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CE056DBD2BC13A49003843AF /* Products */;
 			projectDirPath = "";
@@ -215,6 +239,7 @@
 			files = (
 				CE056DCC2BC13A4B003843AF /* LaunchScreen.storyboard in Resources */,
 				CE056DC92BC13A4B003843AF /* Assets.xcassets in Resources */,
+				CE851F1E2BFF12C40045368E /* GoogleService-Info.plist in Resources */,
 				CE056DC72BC13A49003843AF /* Chat.storyboard in Resources */,
 				CE5F43CB2BF0C11100165969 /* Onboarding.storyboard in Resources */,
 			);
@@ -234,8 +259,10 @@
 				CEC76A882BFC6DC70074FFD6 /* AlertMessages.swift in Sources */,
 				CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */,
 				CE5F43CE2BF0CF1700165969 /* OnBoardingViewController.swift in Sources */,
+				CE851F5C2C00BDE60045368E /* AppConstants.swift in Sources */,
 				CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */,
 				CEE7D2E62BE7AC8800549090 /* ChatViewModel.swift in Sources */,
+				CE851F5A2C00B50C0045368E /* SignUpViewModel.swift in Sources */,
 				CE056DC22BC13A49003843AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +494,14 @@
 				minimumVersion = 7.0.2;
 			};
 		};
+		CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -474,6 +509,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE081CD22BE2352900274456 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		CE851F2C2BFF13490045368E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CE851F382BFF13490045368E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

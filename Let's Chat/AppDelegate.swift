@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /// IQKeyboardManager is enabling to to adjust the current view when keyboard appears or hides. It is a library.
         IQKeyboardManager.shared.enable = true
+        
+        /// Configuring the firebase library so that it will be ready to use just after application get's launched
+        FirebaseApp.configure()
         
         return true
     }
