@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import NVActivityIndicatorView
 
 extension UITextField {
     
@@ -32,6 +32,13 @@ extension UITextField {
 
 extension UIViewController {
     
+    /// This struct helps to store views with in this extension so that these views can be easily accessed from
+    ///  any other method with in the scope. These views are required for startLoading and stopLoading.
+    private struct LoaderProperties {
+        static var loadingView: NVActivityIndicatorView?
+        static var backgroundView: UIView?
+    }
+    
     /// This method adds the functionality of showing alerts from any view controller directly
     func showAlert(using alertMessage: AlertMessage) {
         let alert = UIAlertController(title: alertMessage.title, message: alertMessage.message, preferredStyle: .alert)
@@ -39,11 +46,47 @@ extension UIViewController {
         present(alert, animated: true)
     }
     
-    /// This method can be used to display external error i.e. errors produced by 3rd party libraries etc,
-    /// that directly provieds error string. Do not use this method for in app errors
-    func showAlert(using alertMessage: String) {
-        let alert = UIAlertController(title: "External Error", message: alertMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        present(alert, animated: true)
+    /// This method can be used to freeze the screen and show a loader to give illusion to user that data is loading
+    func startLoading() {
+        setupActivityIndicatorView()
+        LoaderProperties.loadingView?.startAnimating()
+    }
+    
+    /// This method helps to setup ui for loader, which we display using startLoading() mehtod
+    private func setupActivityIndicatorView() {
+        guard LoaderProperties.backgroundView == nil, LoaderProperties.loadingView == nil else { return }
+        
+        let backgroundView = UIView()
+                
+        backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(backgroundView)
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
+        LoaderProperties.backgroundView = backgroundView
+        
+        var loadingView: NVActivityIndicatorView
+        let size: CGFloat = 50.0
+        let frame = CGRect(x: (view.frame.width - size) / 2,
+                           y: (view.frame.height - size) / 2,
+                           width: size,
+                           height: size)
+
+        loadingView = NVActivityIndicatorView(frame: frame, type: .ballPulseSync, color: .brandBlackBrown, padding: 0)
+        backgroundView.addSubview(loadingView)
+        LoaderProperties.loadingView = loadingView
+    }
+    
+    /// This method can be used to dismiss loader which is started displaying using startLoading() method
+    func stopLoading() {
+        LoaderProperties.loadingView?.stopAnimating()
+        LoaderProperties.backgroundView?.removeFromSuperview()
+        
+        LoaderProperties.loadingView = nil
+        LoaderProperties.backgroundView = nil
     }
 }

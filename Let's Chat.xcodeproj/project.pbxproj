@@ -22,6 +22,8 @@
 		CE851F392BFF13490045368E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE851F382BFF13490045368E /* FirebaseFirestore */; };
 		CE851F5A2C00B50C0045368E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE851F592C00B50C0045368E /* SignUpViewModel.swift */; };
 		CE851F5C2C00BDE60045368E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE851F5B2C00BDE60045368E /* AppConstants.swift */; };
+		CE851F7F2C03348A0045368E /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CE851F7E2C03348A0045368E /* NVActivityIndicatorView */; };
+		CE851F812C03348A0045368E /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = CE851F802C03348A0045368E /* NVActivityIndicatorViewExtended */; };
 		CEBD88872BF7366700445644 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88862BF7366700445644 /* UIKitExtensions.swift */; };
 		CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88882BF750AF00445644 /* LoginViewController.swift */; };
 		CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD888B2BF788BF00445644 /* SignUpViewController.swift */; };
@@ -56,9 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE851F7F2C03348A0045368E /* NVActivityIndicatorView in Frameworks */,
 				CE081CD42BE2352900274456 /* IQKeyboardManagerSwift in Frameworks */,
 				CE851F2D2BFF13490045368E /* FirebaseAuth in Frameworks */,
 				CE851F392BFF13490045368E /* FirebaseFirestore in Frameworks */,
+				CE851F812C03348A0045368E /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +194,8 @@
 				CE081CD32BE2352900274456 /* IQKeyboardManagerSwift */,
 				CE851F2C2BFF13490045368E /* FirebaseAuth */,
 				CE851F382BFF13490045368E /* FirebaseFirestore */,
+				CE851F7E2C03348A0045368E /* NVActivityIndicatorView */,
+				CE851F802C03348A0045368E /* NVActivityIndicatorViewExtended */,
 			);
 			productName = "Let's Chat";
 			productReference = CE056DBC2BC13A49003843AF /* Let's Chat.app */;
@@ -222,6 +228,7 @@
 			packageReferences = (
 				CE081CD22BE2352900274456 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE851F7D2C03348A0045368E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = CE056DBD2BC13A49003843AF /* Products */;
 			projectDirPath = "";
@@ -502,6 +509,14 @@
 				minimumVersion = 10.26.0;
 			};
 		};
+		CE851F7D2C03348A0045368E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -519,6 +534,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE851F1F2BFF13490045368E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		CE851F7E2C03348A0045368E /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE851F7D2C03348A0045368E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		CE851F802C03348A0045368E /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE851F7D2C03348A0045368E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

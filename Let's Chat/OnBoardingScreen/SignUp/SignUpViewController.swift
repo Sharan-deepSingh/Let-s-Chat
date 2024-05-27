@@ -60,12 +60,16 @@ class SignUpViewController: UIViewController {
         }
         
         if let email = emailTextField.text, let username = usernameTextField.text, let password = passwordTextField.text {
+            startLoading()
+            
             viewModel.registerNewUser(email: email, userName: username, password: password) { isSuccessful, error in
                 if let alertMessage = error {
                     self.showAlert(using: alertMessage)
                 } else {
                     print("Oh...ya ya")
                 }
+                
+                self.stopLoading()
             }
         }
     }

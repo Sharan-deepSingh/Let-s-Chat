@@ -23,7 +23,7 @@ final class SignUpViewModel {
         self.isUserNameAvailable(for: userName, database: dataBase) { status, error in
             
             if let e = error {
-                completion(false, error)
+                completion(false, e)
             } else {
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     
