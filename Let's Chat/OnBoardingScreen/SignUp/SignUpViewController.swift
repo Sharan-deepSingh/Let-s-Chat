@@ -43,7 +43,7 @@ class SignUpViewController: UIViewController {
         guard emailTextField.isNotEmpty(), usernameTextField.isNotEmpty(), passwordTextField.isNotEmpty(),
               confirmPasswordTextField.isNotEmpty() else {
             
-            showAlert(using: AlertMessages.giveMessage(ofType: .allRequired))
+            showAlert(ofType: .allRequired)
             
             return
         }
@@ -51,10 +51,9 @@ class SignUpViewController: UIViewController {
         //TODO: - I am not sure weather it is an appropriate place to check for conditions for text fields validation or we should do this stuff in view model so, in case if view model if more appropriate do that in future
         
         guard passwordTextField.text == confirmPasswordTextField.text else {
-            
             passwordTextField.setEmpty()
             confirmPasswordTextField.setEmpty()
-            showAlert(using: AlertMessages.giveMessage(ofType: .passwordMissmatch))
+            showAlert(ofType: .passwordMissmatch)
             
             return
         }
@@ -64,12 +63,14 @@ class SignUpViewController: UIViewController {
             
             viewModel.registerNewUser(email: email, userName: username, password: password) { isSuccessful, error in
                 if let alertMessage = error {
-                    self.showAlert(using: alertMessage)
-                } else {
-                    print("Oh...ya ya")
+                    self.showAlert(ofType: alertMessage)
                 }
                 
                 self.stopLoading()
+                
+                self.showAlert(ofType: .verificationEmailSent) {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }

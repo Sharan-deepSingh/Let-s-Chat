@@ -40,9 +40,48 @@ extension UIViewController {
     }
     
     /// This method adds the functionality of showing alerts from any view controller directly
-    func showAlert(using alertMessage: AlertMessage) {
-        let alert = UIAlertController(title: alertMessage.title, message: alertMessage.message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+    func showAlert(ofType type: Alert, completion: (() -> Void)? = nil) {
+        let alertMessage = AlertMessages.giveMessage(ofType: type)
+        
+        let alert = UIAlertController(
+            title: alertMessage.title,
+            message: alertMessage.message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { _ in
+                    completion?()
+                }
+            )
+        )
+        
+        present(alert, animated: true)
+    }
+    
+    func showOptionAlert(leftOption: StringConstant,
+                         rightOption: StringConstant,
+                         type: Alert,
+                         closure: @escaping () -> Void) {
+        let alertMessage = AlertMessages.giveMessage(ofType: type)
+        
+        let alert = UIAlertController(
+            title: alertMessage.title,
+            message: alertMessage.message,
+            preferredStyle: .alert
+        )
+        
+        let leftAction = UIAlertAction(title: leftOption.rawValue, style: .cancel)
+        let rightAction = UIAlertAction(title: rightOption.rawValue, style: .default) { _ in
+            closure()
+        }
+        
+        alert.addAction(leftAction)
+        alert.addAction(rightAction)
+        
         present(alert, animated: true)
     }
     

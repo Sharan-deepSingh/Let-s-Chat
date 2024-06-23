@@ -7,13 +7,16 @@
 
 import Foundation
 
-
-enum Alert {
+/// Equatable is used when we want to enable comparison of its objects
+enum Alert: Equatable {
     
+    case externalError(String)
     case unknownError
     case allRequired
     case passwordMissmatch
     case userNameNotAvailable
+    case verificationEmailSent
+    case emailNotVerified
 }
 
 
@@ -25,12 +28,15 @@ struct AlertMessage {
 
 
 struct AlertMessages {
-    
-    static let unknownError = "Unknown Error"
-    
+        
     static func giveMessage(ofType alert: Alert) -> AlertMessage {
         switch alert {
         
+        case .externalError(let message):
+            return AlertMessage(
+                title: "External Error",
+                message: message
+            )
         case .unknownError:
             return AlertMessage(
                 title: "Error",
@@ -51,17 +57,23 @@ struct AlertMessages {
                 title: "Error",
                 message: "Username not available, please try with new one"
             )
+        case .verificationEmailSent:
+            return AlertMessage(
+                title: "Success",
+                message: """
+                         We've sent you a verification link through email, please check your mail box and
+                         click the link to verify your email. Once the email get's verified you will be
+                         able to login to your account 😉
+                         """
+            )
+        case .emailNotVerified:
+            return AlertMessage(
+                title: "Verification Failed",
+                message: """
+                         Your email is not verified yet, check your mail box and verify your email or click
+                         resend to get a fresh verification link
+                         """
+            )
         }
-    }
-    
-    
-    /// Helps to make an AlertMessage which is a sturct in this file from an error
-    /// - Parameter error: A parameter that includes details of error
-    /// - Returns: Returns alert message that includes title and message
-    static func makeAlertMessage(from error: Error) -> AlertMessage {
-        return AlertMessage(
-            title: "Error",
-            message: error.localizedDescription
-        )
     }
 }

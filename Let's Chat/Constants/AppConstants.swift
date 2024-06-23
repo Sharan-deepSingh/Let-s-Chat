@@ -7,7 +7,19 @@
 
 import Foundation
 
+enum StringConstant: String {
+    
+    case close = "Close"
+    case cancel = "Cancel"
+    case resend = "Resend"
+}
+
 struct AppConstants {
+    
+    struct DynamicLinks {
+        
+        static let emailVerification = "https://letschatteam.page.link/email-verification"
+    }
     
     struct FireStore {
         
