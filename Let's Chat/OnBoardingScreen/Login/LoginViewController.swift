@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -38,31 +39,40 @@ class LoginViewController: UIViewController {
         guard let email = userNameTextField.text, let password = passwordTextField.text else { return }
         startLoading()
         
-        viewModel.loginUser(with: email, password: password) { status, error, user  in
+        viewModel.loginUser(with: email, password: password) { [weak self] status, error, user  in
+            guard let self = self else { return }
+            
+            stopLoading()
+
             if let e = error {
                 if e == .emailNotVerified {
-                    self.showOptionAlert(leftOption: .cancel, rightOption: .resend, type: .emailNotVerified) {
+                    showOptionAlert(leftOption: .cancel,
+                                    rightOption: .resend,
+                                    type: .emailNotVerified) { [weak self] in
+                        guard let self = self else { return }
+                        
                         if let user = user {
-                            self.startLoading()
+                            startLoading()
                             
-                            self.signUpViewModel.sendEmailVerificationLink(for: user) { status, error in
+                            signUpViewModel.sendEmailVerificationLink(for: user) { [weak self] status, error in
+                                guard let self = self else { return }
+                                
                                 if let e = error {
-                                    self.showAlert(ofType: e)
+                                    showAlert(ofType: e)
                                 } else {
-                                    self.showAlert(ofType: .verificationEmailSent)
+                                    showAlert(ofType: .verificationEmailSent)
                                 }
                                 
-                                self.stopLoading()
+                                stopLoading()
                             }
                         }
                     }
                 } else {
-                    self.showAlert(ofType: e)
+                    showAlert(ofType: e)
                 }
+            } else {
+                pushViewController(from: .Chat, using: .ChatViewController)
             }
-            
-            self.stopLoading()
         }
     }
-    
 }

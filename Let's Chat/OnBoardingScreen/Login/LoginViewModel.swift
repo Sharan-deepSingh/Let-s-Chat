@@ -24,17 +24,17 @@ final class LoginViewModel {
             
             self.checkEmailVerificationStatus(of: loggedInUser) { status, error in
                 if let e = error {
-                    self.logout(auth: auth) { status, error in
+                    self.logout() { status, error in
                         if let e = error {
                             completion(false, e, loggedInUser)
                             return
                         }
                     }
-                    completion(status, e, loggedInUser)
+                    completion(status, e, nil)
                     return
                 }
                 
-                completion(true, nil, nil)
+                completion(true, nil, loggedInUser)
             }
         }
     }
@@ -52,9 +52,9 @@ final class LoginViewModel {
         }
     }
     
-    private func logout(auth: Auth, completion: @escaping (Bool, Alert?) -> Void) {
+    private func logout(completion: @escaping (Bool, Alert?) -> Void) {
         do {
-            try auth.signOut()
+            try Auth.auth().signOut()
             completion(true, nil)
         } catch {
             completion(false, .externalError(error.localizedDescription))

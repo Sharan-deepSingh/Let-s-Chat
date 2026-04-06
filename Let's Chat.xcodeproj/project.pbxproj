@@ -29,6 +29,7 @@
 		CEBD88892BF750AF00445644 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD88882BF750AF00445644 /* LoginViewController.swift */; };
 		CEBD888C2BF788BF00445644 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD888B2BF788BF00445644 /* SignUpViewController.swift */; };
 		CEC76A882BFC6DC70074FFD6 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */; };
+		CED407682C317B2E0059542D /* StoryboardNViewControllerIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED407672C317B2E0059542D /* StoryboardNViewControllerIDs.swift */; };
 		CEE7D2E62BE7AC8800549090 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7D2E52BE7AC8800549090 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		CEBD88882BF750AF00445644 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEBD888B2BF788BF00445644 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		CED407672C317B2E0059542D /* StoryboardNViewControllerIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNViewControllerIDs.swift; sourceTree = "<group>"; };
 		CEE7D2E52BE7AC8800549090 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 			children = (
 				CEC76A872BFC6DC70074FFD6 /* AlertMessages.swift */,
 				CE851F5B2C00BDE60045368E /* AppConstants.swift */,
+				CED407672C317B2E0059542D /* StoryboardNViewControllerIDs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				CEE7D2E62BE7AC8800549090 /* ChatViewModel.swift in Sources */,
 				CE851F5A2C00B50C0045368E /* SignUpViewModel.swift in Sources */,
 				CE056DC22BC13A49003843AF /* SceneDelegate.swift in Sources */,
+				CED407682C317B2E0059542D /* StoryboardNViewControllerIDs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

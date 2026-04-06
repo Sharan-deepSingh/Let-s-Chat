@@ -128,4 +128,10 @@ extension UIViewController {
         LoaderProperties.loadingView = nil
         LoaderProperties.backgroundView = nil
     }
+    
+    func pushViewController(from storyboardName: StoryboardName, using storyBoardID: StoryboardID) {
+        let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID.rawValue)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
